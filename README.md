@@ -1,4 +1,4 @@
-                                                                                              🔢 DigitLab
+                                                        🔢 DigitLab
 
 DigitLab performs basic mathematical operations on single numbers with an easy-to-use interface.
 
