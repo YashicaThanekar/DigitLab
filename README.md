@@ -16,6 +16,7 @@ DigitLab performs basic mathematical operations on single numbers with an easy-t
 → Lightweight and beginner-friendly project  
 
 
+
 **Technologies Used**
 - → HTML5  
 - → CSS3  
