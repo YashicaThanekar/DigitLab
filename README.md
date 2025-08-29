@@ -19,11 +19,11 @@ DigitLab performs basic mathematical operations on single numbers with an easy-t
 **Technologies Used**
 - → HTML5  
 - → CSS3  
-- → JavaScript (Vanilla)  
+- → JavaScript
 
 
 **Live Preview**
-👉 [~Click here to try DigitLab~](https://yashicathanekar.github.io/DigitLab/)  
+[~ Click here to try DigitLab ~](https://yashicathanekar.github.io/DigitLab/)  
 
 
 👩‍💻 Author
