@@ -1,0 +1,200 @@
+<html>
+
+    <head>
+
+            <title>DigitLab</title>
+
+    </head>
+    
+        <style>
+            
+            *{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1{
+                margin-top: 100px;
+                font-size: 45px;
+                color:#B5446E;
+            }
+
+            .choice{
+                font-size:30px;
+                border-radius: 95px;
+                background-color:#B5446E ;
+                color: #D1D2F9;
+                padding:5px;
+                border: none;
+                padding:5px 20px; 
+            }
+
+            .choice:hover{
+                background-color:#d60757;
+                color:#060622;
+            }
+
+            button:hover{
+                box-shadow: 2px 2px black;
+            }
+
+            input{
+                font-size: 35px;
+                color: #326771;
+            }
+
+            input:hover{
+                border-color: #326771;
+            }
+
+            ::placeholder{
+                color: #326771;
+            }
+
+            body{
+                background-color:#D1D2F9;
+            }
+
+            #result{
+                color: #326771;
+                font-size: 45px;
+            }
+
+             .dropdown {
+            display: inline-block;
+            margin-top: 5px;
+            }
+
+            .dropdown-btn {
+            background-color: #6a5acd;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            }
+
+            .dropdown-content {
+            display: none;
+            margin-top: 10px;
+            padding: 12px;
+            background: #555;
+            color: white;
+            border-radius: 8px;
+            width: 350px;
+            text-align: left;
+            }
+
+        </style>
+
+    <body>
+
+        <h1>Welcome to DigitLab</h1>
+
+       <div class="dropdown">
+       <button class="dropdown-btn" onclick="toggleDropdown()">About</button>
+       <div class="dropdown-content" id="aboutContent">
+            DigitLab is a simple web tool used for mathematical operations using single numbers.
+       </div>
+       </div>
+
+    <script>
+
+        function toggleDropdown() {
+            let content = document.getElementById("aboutContent");
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+
+    </script>
+        <br>
+        </br>
+        <input type="number" id="num" placeholder="Enter a number" required>
+        <br>
+        </br>
+        <br>
+
+        <button class="choice" onclick="square()" >Square</button>
+        <button class="choice" onclick="squareroot()" >Square Root</button>
+        <button class="choice" onclick="cube()" >Cube</button>
+        <button class="choice" onclick="cuberoot()" >Cube Root</button>
+        <button class="choice" onclick="evenodd()" >Even/Odd</button>
+        <button class="choice" onclick="factorial()" >Factorial</button>
+
+        <p id="result"></p>
+
+        <script>
+            
+                function square()
+                {
+                    let n=getNum();
+                    display("Square = "+(n*n));
+                }
+
+                function squareroot()
+                {
+                    let n=getNum();
+                    if(n>0)
+                    {
+                        display("Square root = "+Math.sqrt(n));
+                    }
+                    else
+                    {
+                        alert("Enter positive numbers for finding roots");
+                    }
+                }
+
+                function cube()
+                {
+                    let n=getNum();
+                    display("Cube = "+(n*n*n));
+                }
+
+                function cuberoot()
+                {
+                    let n=getNum();
+                    if(n>0)
+                    {
+                        display("Cube Root = "+Math.cbrt(n));
+                    }
+                    else
+                    {
+                        alert("Enter positive numbers for finding roots");
+                    }
+                }
+
+                function evenodd()
+                {
+                    let n=getNum();
+                    display(n%2==0 ? "Even":"Odd");
+                }
+
+                function factorial()
+                {
+                    let n=getNum();
+                    if(n<0)
+                        {
+                            alert("Factorial for -ve numbers does not exists");
+                            return;
+                        }
+                    let f=1;
+                    for (let i=2;i<=n;i++)
+                    f=f*i;
+                    display("Factorial = "+f);
+                }
+                
+                function getNum() 
+                {
+                    return parseFloat(document.getElementById("num").value);
+                }
+
+                function display(msg) 
+                {
+                    document.getElementById("result").innerText = msg;
+                }
+
+        </script>
+
+    </body>
+
+</html>
